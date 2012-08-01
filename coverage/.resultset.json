@@ -1,7 +1,29 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/helpers/application_helper.rb": [
+        1,
+        null
+      ]
     },
-    "timestamp": 1343850033
+    "timestamp": 1343853177
   }
 }

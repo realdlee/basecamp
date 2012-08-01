@@ -15,10 +15,11 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'simplecov'
+  gem 'sqlite3'
 end
 
 group :production do
-
+  gem 'pg'
 end
 
 
@@ -35,8 +36,6 @@ group :assets do
 end
 
 gem 'devise'
-
-gem 'pg'
 
 gem 'jquery-rails'
 
