@@ -6,6 +6,15 @@ gem 'rails', '3.2.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
   gem 'quiet_assets'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'fabrication'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'simplecov'
 end
 
 group :production do
