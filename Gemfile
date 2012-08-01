@@ -34,6 +34,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'devise'
+
 gem 'pg'
 
 gem 'jquery-rails'
