@@ -22,8 +22,23 @@
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/helpers/projects_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/projects_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/models/project.rb": [
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1343855833
+    "timestamp": 1343858277
   }
 }

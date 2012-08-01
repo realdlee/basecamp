@@ -1,5 +1,9 @@
 Basecamp::Application.routes.draw do
-  root :to => "devise/sessions#new"
+  get "projects/index"
+
+  # devise_scope :user do
+    root :to => "projects#index"
+  # end
   devise_for :users
 
   # The priority is based upon order of creation:
