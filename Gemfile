@@ -8,7 +8,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'capybara'
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda', :require => false
   gem 'fabrication'
   gem 'faker'
   gem 'database_cleaner'
