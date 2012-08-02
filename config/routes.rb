@@ -1,6 +1,8 @@
 Basecamp::Application.routes.draw do
 
-  resources :lists
+  resources :lists do
+    resources :tasks
+  end
 
   resources :projects
 

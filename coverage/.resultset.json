@@ -19,6 +19,8 @@
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/application_controller.rb": [
         1,
         1,
+        1,
+        null,
         null
       ],
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/helpers/application_helper.rb": [
@@ -33,10 +35,14 @@
         1,
         null
       ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/helpers/tasks_helper.rb": [
+        1,
+        null
+      ],
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/lists_controller.rb": [
         1,
         1,
-        1,
+        0,
         0,
         null,
         null,
@@ -50,7 +56,7 @@
         null,
         null,
         1,
-        1,
+        0,
         0,
         0,
         null,
@@ -73,9 +79,11 @@
         1,
         null,
         1,
+        1,
         null
       ],
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/projects_controller.rb": [
+        1,
         1,
         null,
         1,
@@ -110,6 +118,12 @@
         null,
         null,
         null,
+        1,
+        null,
+        1,
+        10,
+        null,
+        null,
         null
       ],
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/models/project.rb": [
@@ -123,12 +137,46 @@
         1,
         null
       ],
+      "/Users/apprentice/Dropbox/DavidLee/basecamp/app/controllers/tasks_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/apprentice/Dropbox/DavidLee/basecamp/app/models/task.rb": [
         1,
         1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1343935672
+    "timestamp": 1343944775
   }
 }

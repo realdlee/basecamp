@@ -3,4 +3,5 @@ class List < ActiveRecord::Base
   validates_presence_of :title, :project_id
 
   belongs_to :project
+  has_many :tasks
 end

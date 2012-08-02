@@ -6,11 +6,12 @@
   </div>
 </div>
 <div class="span3">
-  <div class="well">
-    <h2>Add Todo Lists to your project</h2>
-    <%= link_to "New Todo", new_list_path(:project_id => params[:id]) %>
+  <div class="well" align="center">
+    <h2>Add Todo Lists to your project</h2><br>
+    <h3><u><%= link_to "New Todo", new_list_path(:project_id => params[:id]) %></u><h3>
+    <br>
     <% @project.lists.each do |list| %>
-      <h4><%= list.title %></h4><br>
+      <h4><%= link_to list.title, list_path(list) %></h4><br>
     <% end %>
   </div>
 </div>

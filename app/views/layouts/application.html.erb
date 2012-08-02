@@ -30,8 +30,17 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Home", projects_path  %></li>
-              <li><%= link_to "New Project", new_project_path  %></li>
+              <li><%= link_to "Create a New Project", new_project_path  %></li>
             </ul>
+            <div class = "nav pull-right">
+              <% if user_signed_in? %>
+                <li><a>Signed in as <%= current_user.email %></a></li>
+                <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Sign in", new_user_session_path %></li>
+              <% end %>
+            </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -48,7 +57,7 @@
       </div><!--/content-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; BC Company 2012</p>
       </footer>
 
     </div> <!-- /container -->

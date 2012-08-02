@@ -1,8 +1,12 @@
 <div class="hero-unit" align="center">
+  <% if @projects %>
   <h1>Your Projects</h1>
   <br>
-  <% @projects.each do |project| %>
-    <%= link_to project.title, project_path(project) %><br>
+    <% @projects.each do |project| %>
+      <%= link_to project.title, project_path(project) %><br>
+    <% end %>
+    <% else %>
+    <h1>You have no projects</h1>
   <% end %>
 </div>
 
