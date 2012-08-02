@@ -40,13 +40,10 @@
     <div class="container">
       <div class="content">
         <div class="row">
-           <div class="span12">
               <%= content_tag :p, flash[:success], :class => "flash notice" if flash[:success] %>
               <%= content_tag :p, flash[:notice], :class => "flash notice" if flash[:notice] %>
               <%= content_tag :p, flash[:alert], :class => "flash alert" if flash[:alert] %>
               <%= yield %>
-            </div>
-
         </div><!--/row-->
       </div><!--/content-->
 

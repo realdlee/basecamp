@@ -1,5 +1,16 @@
-<div class="hero-unit" align="center">
-  <h1><%= @project.title %></h1>
-  <br>
-  Creator: <%= @project.user.email %>
+<div class="span9">
+  <div class="hero-unit" align="center">
+    <h1><%= @project.title %></h1>
+    <br>
+    Creator: <%= @project.user.email %>
+  </div>
+</div>
+<div class="span3">
+  <div class="well">
+    <h2>Add Todo Lists to your project</h2>
+    <%= link_to "New Todo", new_list_path(:project_id => params[:id]) %>
+    <% @project.lists.each do |list| %>
+      <h4><%= list.title %></h4><br>
+    <% end %>
+  </div>
 </div>

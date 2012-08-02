@@ -1,7 +1,8 @@
 <div class="hero-unit" align="center">
-<h1>Your Projects</h1>
-<br>
-<% @projects.each do |project| %>
-  <%= link_to project.title, project_path(project) %><br>
-<% end %>
+  <h1>Your Projects</h1>
+  <br>
+  <% @projects.each do |project| %>
+    <%= link_to project.title, project_path(project) %><br>
+  <% end %>
 </div>
+

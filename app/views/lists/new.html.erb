@@ -1,0 +1,8 @@
+<h1>Create a new Todo List</h1>
+<%= form_for @list do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.hidden_field :project_id, :value => @project_id %>
+  <%= f.submit %>
+<% end %>
+
