@@ -60,5 +60,12 @@ module Basecamp
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+    
+    #added for Fabrication gem
+    config.generators do |g|
+      g.test_framework      :rspec, :fixture => true
+      g.fixture_replacement :fabrication
+    end
+    
   end
 end

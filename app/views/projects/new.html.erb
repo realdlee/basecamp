@@ -1,0 +1,17 @@
+<div class="hero-unit" align="center">
+  <h2>Create a new project</h2>
+  <br>
+  <%= form_for @project do |f| %>
+    <h3>Title</h3>
+    <%= f.text_field :title %>
+    <br>
+    <%= f.label :public, "Private" %>
+    <%= f.radio_button :public, 0 %>
+    <%= f.label :public, "Public" %>
+    <%= f.radio_button :public, 1 %>
+    <br>
+    <br>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+</div>

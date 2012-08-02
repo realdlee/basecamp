@@ -1,6 +1,6 @@
 @import "twitter/bootstrap/bootstrap";
-body { 
-	padding-top: 60px;
+body {
+  padding-top: 60px;
 }
 
 @import "twitter/bootstrap/responsive";
@@ -10,7 +10,7 @@ body {
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
 
 // Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
-// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not 
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
 //       have the proper paths. So for now we use the absolute path.
 @fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
 @fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
@@ -30,3 +30,15 @@ body {
 //
 // Example:
 // @linkColor: #ff0000;
+
+.hero-unit {
+  background: @blue;
+  text-decoration-color: @white;
+  color: @white;
+}
+
+a {
+  color: @white;
+}
+
+

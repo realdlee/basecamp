@@ -1,5 +1,5 @@
 Basecamp::Application.routes.draw do
-  get "projects/index"
+  resources :projects
 
   # devise_scope :user do
     root :to => "projects#index"
