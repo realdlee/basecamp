@@ -1,5 +1,12 @@
 <div class="hero-unit" align="center">
-<h1>Create a new Todo List</h1>
+<h1>Create a new To-do List</h1>
+<% if @list.errors.any? %>
+  <ul>
+    <% @list.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_for @list do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>

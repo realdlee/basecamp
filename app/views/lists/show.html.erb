@@ -8,13 +8,12 @@
 </div>
 <div class="span3">
   <div class="well" align="center">
-    <h2> Add tasks to your list </h2>
+    <h2> Add tasks to your to-do list </h2>
     <br>
     <%= form_for [@list,@task] do |f| %>
       <%= f.label :description %>
       <%= f.text_field :description, :style => "width: 175px" %>
       <br>
-      <%= f.hidden_field :list_id, :value => params[:id] %>
       <%= f.submit class: "btn btn-primary"%>
     <% end %>
   </div>

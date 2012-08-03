@@ -1,54 +1,52 @@
 require 'spec_helper'
 
 describe TasksController do
+  render_views
 
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
-    end
+  include Devise::TestHelpers
+  before :each do
+    @user = Fabricate(:user)
+    sign_in @user
   end
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
+  describe "#create" do
+    context "given valid params" do
+      before :each do
+        project = @user.projects.new(:title => "Basecamp", :public => true)
+        project.save!
+        list = project.lists.create(:title => "Testing")
+        post(:create, :list_id => list.id, :task => { :description => "Write Capybara tests" })
+      end
+
+      it "saves a task" do
+        assigns(:task).should be_persisted
+      end
+
     end
+
+    context "given invalid params" do
+      before :each do
+        project = @user.projects.create(:public => true, :title => 'blah')
+        @list = project.lists.create(:title => "Testing")
+        post(:create, :list_id => @list.id)
+      end
+
+      it "does not save a task" do
+        assigns(:task).should_not be_persisted
+      end
+    end
+
+    context "when given an invalid id" do
+      it "breaks" do
+        expect {
+          post(:create, :list_id => 20)
+        }.to raise_error(ActiveRecord::RecordNotFound)
+      end
+
+    end
+
+
   end
 
-  describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'create'" do
-    it "returns http success" do
-      get 'create'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'update'" do
-    it "returns http success" do
-      get 'update'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
-    end
-  end
 
 end

@@ -10,12 +10,12 @@ class TasksController < ApplicationController
 
   def create
     @list = List.find(params[:list_id])
-    @task = Task.new(params[:task])
+    @task = @list.tasks.new(params[:task])
     if @task.save
       flash[:success] = "Success!"
       redirect_to list_path(@list)
     else
-      redirect_to list_path(@list), :alert => "Project must have a title, and public status."
+      redirect_to list_path(@list) , :alert => "Project must have a title and a public status."
     end
   end
 

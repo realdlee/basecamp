@@ -18,7 +18,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list)
     else
-      redirect_to new_list_path, :alert => "A todo list must have a name."
+      render 'new'
     end
   end
 

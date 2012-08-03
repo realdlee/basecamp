@@ -12,7 +12,7 @@ describe Project do
     @user = User.find_by_email(@email)
   end
 
-  context "Project#index" do
+  context "#index" do
     it "show all projects that the user created" do
       @user.projects.create(title: "Hacker News Clone", public: 1)
       click_link('Home')
