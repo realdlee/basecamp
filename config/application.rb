@@ -67,5 +67,6 @@ module Basecamp
       g.fixture_replacement :fabrication
     end
     
+   
   end
 end

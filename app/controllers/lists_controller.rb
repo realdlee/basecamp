@@ -5,6 +5,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])
   end
 
   def update
@@ -14,11 +15,16 @@ class ListsController < ApplicationController
   end
 
   def create
+    @project = Project.find(params[:list][:project_id])
     @list = List.new(params[:list])
-    if @list.save
-      redirect_to list_path(@list)
-    else
-      render 'new'
+    respond_to do |format|
+      if @list.save
+        format.html { redirect_to project_path(@project) }
+        format.js
+      else
+        format.html { render 'new' }
+        format.js
+      end
     end
   end
 

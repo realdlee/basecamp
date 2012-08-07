@@ -3,15 +3,26 @@
     <h1><%= @project.title %></h1>
     <br>
     Creator: <%= @project.user.email %>
+    <div class="lists">
+      <% @project.lists.each do |list| %>
+        <div id=<%= list.id %>>
+         <li><%=link_to list.title, list %>
+
+         <%= link_to "Edit", edit_list_path %></li>
+        </div>
+      <% end %>
+
+    </div>
   </div>
 </div>
 <div class="span3">
   <div class="well" align="center">
     <h2>Add Todo Lists to your project</h2><br>
-    <h3><u><%= link_to "New Todo", new_list_path(:project_id => params[:id]) %></u><h3>
-    <br>
-    <% @project.lists.each do |list| %>
-      <h4><%= link_to list.title, list_path(list) %></h4><br>
+    <%= form_for @list, :remote => true  do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, :style => "width: 175px" %>
+      <%= f.hidden_field :project_id, :value => params[:id] %><br/>
+      <%= f.submit %>
     <% end %>
   </div>
 </div>

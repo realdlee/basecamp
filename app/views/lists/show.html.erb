@@ -1,18 +1,20 @@
 <div class="span9">
   <div class="hero-unit" align="center">
     <h1><%= @list.title %></h1>
-    <% @list.tasks.each do |task| %>
-      <li><%= task.description %></li>
-    <% end %>
+    <div class="tasks">
+      <% @list.tasks.each do |task| %>
+        <li><%= task.description %></li>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="span3">
   <div class="well" align="center">
     <h2> Add tasks to your to-do list </h2>
     <br>
-    <%= form_for [@list,@task] do |f| %>
+    <%= form_for [@list,@task], :remote => true do |f| %>
       <%= f.label :description %>
-      <%= f.text_field :description, :style => "width: 175px" %>
+      <%= f.text_field :description, :style => "width: 175px", :class => "submittable" %>
       <br>
       <%= f.submit class: "btn btn-primary"%>
     <% end %>
